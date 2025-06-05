@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GLOBAL */
+
+html {
+    --color-blue: #14244c;
+    --color-naranja: #eac278;
+    --color-naranja-oscuro: #c4953d;
+}
+
+h1,
+h2,
+h3,
+p,
+input,
+label,
+a {
+    font-family: "Poppins", sans-serif;
+}
+
+input[type=password],
+input[type=text],
+input[type=email] {
+    width: 100%;
+    margin-bottom: 1rem;
+    border: 1px solid rgb(189, 189, 189);
+    padding: 8px 5px;
+    outline: none;
+}
+
+label {
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+/* UTILITIES */
+
+.button {
+    padding: 8px 35px;
+    border: none;
+    color: white;
+    background-color: var(--color-naranja);
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--color-naranja-oscuro);
+}
+
+.nav {
+    background-color: var(--color-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.nav__img {
+    border-radius: 0 0 20px 20px;
+    padding: 0 30px;
+    background-color: var(--color-naranja);
+}
+
+.nav img {
+    width: 50px;
+}
+
+.nav div a:hover {
+    color: var(--color-naranja);
+}
+
+#nav__desktop {
+    display: none;
+}
+
+#menu {
+    font-size: 2rem;
+    color: white;
+}
+
+.header__login {
+    background-color: var(--color-blue);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.header__login h2 {
+    font-size: 2rem;
+}
+
+.form__login {
+    max-width: 700px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.form__login-button {
+    display: block;
+    margin: auto;
+}
+
+.form__register {
+    padding: 30px 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.form__register-contenedor {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 800px) {
+    #menu {
+        display: none;
+    }
+
+    #nav__desktop {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .nav {
+        padding: 0 100px;
+    }
+
+    .nav__img {
+        padding: 0 45px;
+    }
+
+    .nav img {
+        width: 55px;
+    }
+
+    .form__register {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 60px 25px;
+    }
+
+    .form__register-contenedor {
+        flex-direction: row;
+    }
+
+    .form__register-contenedor div:nth-child(1) {
+        border-right: 1px solid black;
+        padding-right: 30px;
+    }
+
+    .form__register-contenedor div:nth-child(2) {
+        padding-left: 30px;
+    }
+}
